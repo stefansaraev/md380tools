@@ -101,21 +101,23 @@ flashdb: user.bin
 release:
 	-mkdir release
 	"${MAKE}" clean image_D13
-	cp applet/experiment.bin release/D13.exp.bin
+	cp applet/experiment.bin release/exp.D13.bin
 	"${MAKE}" clean image_S13
-	cp applet/experiment.bin release/S13.exp.bin
+	cp applet/experiment.bin release/exp.S13.bin
 	"${MAKE}" clean image_D02
-	cp applet/experiment.bin release/S02.exp.bin
+	cp applet/experiment.bin release/exp.D02.bin
+
 	"${MAKE}" clean user.bin
 	cp user.bin release/
+
 	"${MAKE}" clean original_D13
-	cp firmware/bin/D013.020.bin release/
+	cp firmware/bin/D013.020.bin release/orig.D013.020.bin
 	"${MAKE}" clean original_S13
-	cp firmware/bin/S013.020.bin release/
+	cp firmware/bin/S013.020.bin release/orig.S013.020.bin
 	"${MAKE}" clean original_D02
-	cp firmware/bin/D002.032.bin release/
+	cp firmware/bin/D002.032.bin release/orig.D002.032.bin
 	"${MAKE}" clean original_D03
-	cp firmware/bin/D003.020.bin release/
+	cp firmware/bin/D003.020.bin release/orig.D003.020.bin
 
 dist: 
 	rm -rf $(RELEASE) $(RELEASE).zip
