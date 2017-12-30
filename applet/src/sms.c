@@ -40,9 +40,9 @@ void sms_rpt()
     sms_hdr_t hdr ;    
     sms_bdy_t bdy ;
  
-    // 262994
-    hdr.dstadr[0] = 0x52 ;
-    hdr.dstadr[1] = 0x03 ;
+    // 262994 -> 284990
+    hdr.dstadr[0] = 0x3e ;
+    hdr.dstadr[1] = 0x59 ;
     hdr.dstadr[2] = 0x04 ;
     
     hdr.flags = SMS_TYPE_SINGLECAST ;
@@ -57,9 +57,9 @@ void sms_wx()
     sms_hdr_t hdr ;    
     sms_bdy_t bdy ;
  
-    // 262993
-    hdr.dstadr[0] = 0x51 ;
-    hdr.dstadr[1] = 0x03 ;
+    // 262993 -> 284990
+    hdr.dstadr[0] = 0x3e ;
+    hdr.dstadr[1] = 0x59 ;
     hdr.dstadr[2] = 0x04 ;
     
     hdr.flags = SMS_TYPE_SINGLECAST ;
@@ -79,9 +79,9 @@ void sms_gps()
     sms_hdr_t hdr ;    
     sms_bdy_t bdy ;
  
-    // 262993
-    hdr.dstadr[0] = 0x51 ;
-    hdr.dstadr[1] = 0x03 ;
+    // 262993 -> 284990
+    hdr.dstadr[0] = 0x3e ;
+    hdr.dstadr[1] = 0x59 ;
     hdr.dstadr[2] = 0x04 ;
     
     hdr.flags = SMS_TYPE_SINGLECAST ;
