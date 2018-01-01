@@ -57,9 +57,6 @@ if __name__ == '__main__':
     # remove volume screen (S13.020 using different address, keep offset in mind!)
     # patcher.nopout((0x08020D92))
     # patcher.nopout((0x08020D92 + 0x2))
-    # remove volume screen
-    patcher.nopout((0x0801FED2))
-    patcher.nopout((0x0801FED2 + 0x2))
 
     # freeing ~200k for code patches
     patcher.ffrange(0x0809bda8, 0x80d0614)
