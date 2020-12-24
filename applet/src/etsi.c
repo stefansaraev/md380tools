@@ -139,6 +139,7 @@ void decode_ta( lc_t *lc )
         {
             PRINT("TA %d (%d): %s\n", taContext.src, taContext.length, taContext.text);
             talkerAlias = taContext;
+            talkerAlias.text[talkerAlias.length] = 0;
             LOGR("TA: %s, %d\n", talkerAlias.text, talkerAlias.length);
         }
         else if (taContext.format == 3)
